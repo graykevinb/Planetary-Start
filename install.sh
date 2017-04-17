@@ -1,4 +1,5 @@
-#Prepare for your computer to teleport to mars.
+echo "Prepare for your computer to teleport to mars."
+sudo chmod 644 /lib/systemd/system/myscript.service
 cp planetary_start_service.txt lib/systemd/system/planetary_start.service
 systemctl daemon-reload
 systemctl enable planetary_start.service
