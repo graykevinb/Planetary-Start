@@ -1,9 +1,13 @@
 # Planetary-Start
-Run programs and poweroff your Raspberry Pi with a few LEDs and  a simple switch
+Planetary-Start is a way to run programs on a Raspberry Pi with the push of a button.
+A python script is run at boot with systemd. You can then run whatever code you specify when a hardware button is connected and a few LEDs (optional).
 
 ### Installation
 The installation is quite simple. Either run the install script or run these few commands:
+Before you install you'll need to setup a few things. First connect a button to GPIO pin #26.
+Then if you want LEDs for status you can plug them in at GPIO #19 and another at GPIO #21. Of course you can change it if you want. 
 
+Finally edit line 7 of planetary_start_service.txt to include the path to your code you want to run on the button press. (Its set up to use python3 but you can switch it to whatever you want.) 
 -------
 1. Move the .service file to its proper place:
 	`sudo cp planetary_start_service.txt /lib/systemd/system/planetary_start.service`
