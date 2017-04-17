@@ -4,7 +4,7 @@ After=multi-user.target
 
 [Service]
 Type=idle
-ExecStart=/usr/bin/python3 /home/pi/planetary_start/spaceship_controls.py
+ExecStart=/usr/bin/python3 /full_path_to_filename
 Restart=always
 
 [Install]
